@@ -1,0 +1,23 @@
+<Page loaded="onNavigatingTo"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar>
+        <Label text="{{barTitle}}" id="actionTitle"></Label>
+    </ActionBar>
+
+    <GridLayout>
+        <StackLayout class="p-5">
+            <Label text="Articles" class="page_head"></Label>
+            <ListView items="{{ articles }}" itemTap="onItemTap" class="listview">
+                <ListView.itemTemplate>
+                    <StackLayout orientation="horizontal">
+                        <Image src="{{ photoUrl }}" width="100" stretch="aspectFit" />
+                        <StackLayout orientation="vertical">
+                            <Label textWrap="true" class="head" text="{{ title }}" />
+                            <Label textWrap="true" class="info" text="{{ desc }}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </StackLayout>
+    </GridLayout>
+</Page>

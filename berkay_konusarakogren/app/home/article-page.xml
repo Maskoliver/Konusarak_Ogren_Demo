@@ -1,0 +1,22 @@
+<Page loaded="onNavigatingTo"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar>
+        <Label text="{{barTitle}}" id="actionTitle"></Label>
+    </ActionBar>
+
+    <GridLayout>
+        <ScrollView>
+            <StackLayout class="p-5">
+                <Image src="{{ imgSrc }}" height="200" stretch="aspectFit" />
+                <Label textWrap="true" class="head" text="Most used 5 words" />
+                <Label textWrap="true" class="ar" text="{{ engTopFive }}" />
+                <Label textWrap="true" class="head" text="En çok kullanılan 5 kelime" />
+                <Label textWrap="true" class="ar" text="{{ trTopFive }}" />
+                <Label textWrap="true" class="page_head" text="Article" />
+                <Label textWrap="true" class="ar" text="{{ article }}" />
+
+                <Button text="Back" class="backButton" tap="goBack"></Button>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+</Page>
